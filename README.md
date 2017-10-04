@@ -1,1 +1,1 @@
-# cvs
+# accessible-restaurant
