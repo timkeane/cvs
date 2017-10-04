@@ -5,6 +5,8 @@ var finderDecorations = {
       .append(this.nameHtml())
       .append(this.locationHtml())
       .append(this.addressHtml())
+      .append(this.phoneHtml())
+      .append(this.webHtml())
       .append(this.mapHtml())
       .append(this.directionsHtml());
   },
