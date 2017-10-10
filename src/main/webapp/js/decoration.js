@@ -1,4 +1,13 @@
 var finderDecorations = {
+  extendFeature: function(){
+    var locationKey = this.get('LONGITUDE') + '@' + this.get('LATITUDE');
+    var count = finderDecorations.countByLocation[locationKey] || 0;
+    finderDecorations.countByLocation[locationKey] = count + 1;
+    this.locationKey = locationKey;
+  },
+  getCountAtLocation: function(){
+    return finderDecorations.countByLocation[this.locationKey];
+  },
   html: function(){
     return $('<div class="info"></div>')
       .append(this.distanceHtml())
@@ -61,3 +70,5 @@ var finderDecorations = {
     return this.get('ORGANIZATION_NAME');
   }
 };
+
+finderDecorations.countByLocation = {};
