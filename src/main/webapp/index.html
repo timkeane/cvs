@@ -39,7 +39,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.3.2/ol.js"></script>
 	<script src="https://maps.nyc.gov/nyc-lib/v0.5.0-SNAPSHOT/js/nyc-ol-lib.js"></script>
 	<script src="https://maps.nyc.gov/nyc-lib/v0.5.0-SNAPSHOT/js/nyc-finder.js"></script>
-	<script src="/git/nyc-lib/src/main/js/nyc/finder.js"></script>
 </head>
 <body>
 	<script>
@@ -47,6 +46,7 @@
 	</script>
 	<h1 class="banner"><span>Crime Victim Services Finder</span></h1>
 	<div id="map"></div>
+	<div id="age-filter"></div>
 	<div id="type-filter"></div>
 	<script>
 		$(document).ready(function(){
@@ -83,12 +83,14 @@
 				map: map,
 				finderSource: finderSource,
 				locationMgr: locationMgr,
+				filterControls: filterControls,
 				directionsUrl: 'https://maps.googleapis.com/maps/api/js?sensor=false&libraries=visualization'
 			});
 
 		});
 	</script>
 	<script src="js/decoration.js"></script>
+	<script src="js/filter.js"></script>
 	<script src="js/style.js"></script>
 </body>
 </html>
