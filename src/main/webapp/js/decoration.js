@@ -4,6 +4,7 @@ var finderDecorations = {
     var count = finderDecorations.countByLocation[locationKey] || 0;
     finderDecorations.countByLocation[locationKey] = count + 1;
     this.locationKey = locationKey;
+    this.locationIdx = count;
   },
   getCountAtLocation: function(){
     return finderDecorations.countByLocation[this.locationKey];
