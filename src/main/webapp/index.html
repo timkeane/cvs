@@ -39,6 +39,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.3.2/ol.js"></script>
 	<script src="https://maps.nyc.gov/nyc-lib/v0.5.0-SNAPSHOT/js/nyc-ol-lib.js"></script>
 	<script src="https://maps.nyc.gov/nyc-lib/v0.5.0-SNAPSHOT/js/nyc-finder.js"></script>
+	<script src="/nyc-lib/src/main/js/nyc/finder.js"></script>
 </head>
 <body>
 	<script>
@@ -84,7 +85,8 @@
 				finderSource: finderSource,
 				locationMgr: locationMgr,
 				filterControls: filterControls,
-				directionsUrl: 'https://maps.googleapis.com/maps/api/js?sensor=false&libraries=visualization'
+				directionsUrl: 'https://maps.googleapis.com/maps/api/js?sensor=false&libraries=visualization',
+				mapClickOptions: {hitTolerance: 25}
 			});
 
 		});
