@@ -136,7 +136,7 @@ var finderDecorations = {
   languagesHtml: function(){
     var ul = this.makeList(this.languages, this.get('OTHER_LANGUAGE'));
     if (ul.children().length){
-      var dif = $('<div class="languages"><div class="name">Languages offered:</div></div>');
+      var div = $('<div class="languages"><div class="name">Languages offered:</div></div>');
       if (ul.children().length == this.languages.length && this.get('INTERPRETATION_SERVICE_OFFERED')){
         return div.append('<div>Interpretation service offered</div>');
       }else{
