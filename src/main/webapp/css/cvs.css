@@ -1,0 +1,13 @@
+.info .address {
+  margin-bottom: 5px;
+}
+.detail .name {
+  margin: 3px 0;
+}
+.detail ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+.detail .name, .detail li {
+  text-transform: capitalize;
+}
