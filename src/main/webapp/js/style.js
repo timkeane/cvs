@@ -1,25 +1,36 @@
 var finderStyle = function(feature, resolution){
   var zoom = nyc.ol.TILE_GRID.getZForResolution(resolution);
-  var color = feature.getCountAtLocation() > 1 ? 'rgba(255,0,0,0.5)' : 'rgba(0,0,255,0.5)'
+  var many = feature.getCountAtLocation() > 1;
   finderStyle.cache[zoom] = finderStyle.cache[zoom] || {};
-  if (!finderStyle.cache[zoom][color]){
+  if (!finderStyle.cache[zoom][many]){
     var radius = 4;
     if (zoom > 11) radius = 8;
     if (zoom > 14) radius = 12;
-    finderStyle.cache[zoom][color] = new ol.style.Style({
-      image: new ol.style.Circle({
-        radius: radius,
-        fill: new ol.style.Fill({
-          color: color
-        }),
-        stroke: new ol.style.Stroke({
-          color: '#0000ff',
-          width: 1
-        })
+    finderStyle.cache[zoom][many] = new ol.style.Style({
+      image: finderStyle.getImage(many, radius)
+    });
+  }
+  return finderStyle.cache[zoom][many];
+};
+
+finderStyle.getImage = function(many, radius){
+  if (many){
+    return new ol.style.Icon({
+      scale: 4.5 * radius / 90,
+      src: 'img/stack.svg'
+    });
+  }else{
+    return new ol.style.Circle({
+      radius: radius,
+      fill: new ol.style.Fill({
+        color: '#38c'
+      }),
+      stroke: new ol.style.Stroke({
+        color: '#fff',
+        width: 1.5
       })
     });
   }
-  return finderStyle.cache[zoom][color];
 };
 
 finderStyle.cache = {};
