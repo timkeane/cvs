@@ -3,15 +3,16 @@ var finderStyle = function(feature, resolution){
   var count = feature.getCountAtLocation();
   finderStyle.cache[zoom] = finderStyle.cache[zoom] || {};
   if (!finderStyle.cache[zoom][count]){
-    var scale = 12;
-    if (zoom > 11) scale = 16;
-    if (zoom > 14) scale = 24;
-    if (zoom > 17) scale = 32;
+    var size = 12;
+    if (zoom > 11) size = 16;
+    if (zoom > 13) size = 24;
+    if (zoom > 15) size = 32;
+    if (zoom > 17) size = 40;
     var style = [
       new ol.style.Style({
         image: new ol.style.Icon({
           src: 'img/' + (count == 1 ? 'icon.svg' : 'stack.svg'),
-          scale: scale / 33
+          scale: size / 33
         })
       })
     ];
@@ -22,10 +23,10 @@ var finderStyle = function(feature, resolution){
             fill: new ol.style.Fill({color: '#fff'}),
             font: '20px sans-serif',
             text: count + '',
-            offsetX: 5 * scale / 33,
-            offsetY: -4 * scale / 33,
+            offsetX: 5 * size / 33,
+            offsetY: -4 * size / 33,
             textAlign: 'center',
-            scale: scale / 33
+            scale: size / 33
           })
         })
       );
