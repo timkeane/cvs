@@ -96,11 +96,13 @@ var finderDecorations = {
     return a.data('feature', this);
   },
   detailHtml: function(){
-    return new nyc.Collapsible({
+    var collapsible = new nyc.Collapsible({
       target: $('<div class="detail"></div>'),
       title: 'Details',
       content: this.detailContent()
-    }).container;
+    });
+    collapsible.on('expand', nyc.finder.detailExpanded, nyc.finder);
+    return collapsible.container;
   },
   detailContent: function(){
     var div = $('<div></div>');
