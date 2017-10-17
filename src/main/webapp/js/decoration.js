@@ -84,7 +84,7 @@ var finderDecorations = {
   webHtml: function(){
     var web = this.get('WEBSITE');
     if (web){
-      return $('<a class="web" data-role="button" target="blank">Website</a>').attr('href', web);
+      return $('<a class="web" data-role="button" target="blank" rel="noopener noreferrer">Website</a>').attr('href', web);
     }
   },
   mapHtml: function(){
