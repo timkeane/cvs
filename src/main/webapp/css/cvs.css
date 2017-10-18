@@ -13,7 +13,7 @@
 }
 #lang-btn, #cvs-email-btn, #cvs-call-btn {
   position: fixed;
-  z-index: 2;
+  z-index: 2000;
 }
 #cvs-email-btn, #cvs-call-btn {
   bottom: 3px;
@@ -89,4 +89,12 @@
 	display: block;
 	min-height: 10px;
 	width: auto;
+}
+#panel {
+  background-color: #fff;
+}
+@media only screen and (max-width : 750px), screen and (max-device-height: 350px) {
+  #panel-content {
+    height: calc(100% - 45px);
+  }
 }
