@@ -52,17 +52,32 @@
 	<div id="type-filter"></div>
 	<a id="cvs-call-btn" class="ctl ctl-btn" data-role="button" data-icon="none" data-iconpos="notext">call for assistance</a>
 	<a id="cvs-email-btn" class="ctl ctl-btn" data-role="button" data-icon="none" data-iconpos="notext">email for assistance</a>
+	<div id="splash" onclick="$(this).fadeOut();">
+		<div class="content">
+			<div class="close"><a onclick="$('#contact').fadeOut();"><span class="noshow">Close</span></a></div>
+			<h1>computer safety notice</h1>
+			<p>
+				Be aware that abusers can track your visits to this web page.
+				If you feel internet usage may be monitored please call the 24-hour
+				<span>new york city domestic violence hotline</span>.
+			</p>
+			<a class="assist phone" data-role="button" href="tel:800-621–4673">800-621–HOPE</a>
+		</div>
+	</div>
 	<div id="contact">
 		<div class="content">
 			<div class="close"><a onclick="$('#contact').fadeOut();"><span class="noshow">Close</span></a></div>
 			<div class="msg">
 				<div class="call">
-					<a class="emergency" data-role="button" href="tel:911">For emergencies call 911</a>
-					<a class="assist" data-role="button" href="tel:212-555-5555">For assistance call 212-555-5555</a>
+					<a class="emergency phone" data-role="button" href="tel:911">for emergencies call<br>911</a>
+					<a class="assist phone" data-role="button" href="tel:866-689-4357">crime victim hotline<br>866-689-HELP</a>
+					<a class="assist phone" data-role="button" href="tel:800-621–4673">domestic violence hotline<br>800-621–HOPE</a>
 				</div>
 				<div class="email">
-					<a class="assist" data-role="button" href="mailto:assist@mocj.nyc.gov?subject=Assistance%20Request&body=blah%20blah">For assistance</a>
-					<a class="provider" data-role="button" href="mailto:provider@mocj.nyc.gov?subject=Provider%20Update&body=blah%20blah">To update provider info</a>
+					<a class="emergency phone" data-role="button" href="tel:911">for emergencies call<br>911</a>
+					<a class="assist email" data-role="button" href="tel:311-692">text 311 for assistance<br>with any crime<br>311-692</a>
+					<a class="assist web" data-role="button" href="http://www1.nyc.gov/site/ocdv/about/contact-ocdv.page">assistance with crimes<br>related to domestic violence</a>
+					<a class="provider email" data-role="button" href="mailto:victimservices@cityhall.nyc.gov?subject=Provider%20Update&body=blah%20blah">To update provider info</a>
 				</div>
 			</div>
 		</div>
