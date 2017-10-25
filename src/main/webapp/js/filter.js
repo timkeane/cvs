@@ -6,22 +6,22 @@ var filterControls = [
     choices: [{
       name: 'AGE_0-5',
       value: '1',
-      label: 'Under 5 yrs old',
+      label: 'Under 5 years old',
       checked: false
     }, {
       name: 'AGE_5-24',
       value: '1',
-      label: '5 to 24 yrs old',
+      label: '5 to 24 years old',
       checked: false
     }, {
       name: 'AGE_25-60',
       value: '1',
-      label: '25 to 60 yrs old',
+      label: '25 to 60 years old',
       checked: false
     }, {
       name: 'AGE_60+',
       value: '1',
-      label: '60 yrs old and older',
+      label: '60 years old and older',
       checked: false
     }]
   }),
@@ -42,7 +42,7 @@ var filterControls = [
     }, {
       name: 'SEXUAL_ASSAULT',
       value: '1',
-      label: 'Sexual assult',
+      label: 'Sexual assault',
       checked: false
     }, {
       name: 'VIOLENT_CRIME',
