@@ -53,7 +53,7 @@ $(document).ready(function(){
     isButton: true
   });
 
-  $('#map-page').append($('#cvs-call-btn, #cvs-email-btn,#contact'));
+  $('#map-page').append($('#cvs-call-btn, #cvs-email-btn, #contact, #splash'));
 
   function showContact(what){
     $('#contact .msg .email, #contact .msg .call').hide();
