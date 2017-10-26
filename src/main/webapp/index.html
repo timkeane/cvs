@@ -52,9 +52,9 @@
 	<div id="type-filter"></div>
 	<a id="cvs-call-btn" class="ctl ctl-btn" data-role="button" data-icon="none" data-iconpos="notext">call for assistance</a>
 	<a id="cvs-email-btn" class="ctl ctl-btn" data-role="button" data-icon="none" data-iconpos="notext">email for assistance</a>
-	<div id="splash" onclick="$(this).fadeOut();">
+	<div id="splash" class="splash" onclick="$(this).fadeOut();">
 		<div class="content">
-			<div class="close"><a onclick="$('#contact').fadeOut();"><span class="noshow">Close</span></a></div>
+			<div class="close"><a><span class="noshow">Close</span></a></div>
 			<h1>computer safety notice</h1>
 			<p>
 				Be aware that abusers can track your visits to this web page.
@@ -64,7 +64,7 @@
 			<a class="assist phone" data-role="button" href="tel:800-621–4673">800-621–HOPE</a>
 		</div>
 	</div>
-	<div id="contact">
+	<div id="contact" class="splash">
 		<div class="content">
 			<div class="close"><a onclick="$('#contact').fadeOut();"><span class="noshow">Close</span></a></div>
 			<div class="msg">
