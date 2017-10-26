@@ -157,7 +157,11 @@ a.popup-closer:hover,
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512px%22%20height%3D%22512px%22%3E%3Cpath%20d%3D%22M504.401%2C237.893L273.994%2C7.486c-9.988-9.981-26.245-9.981-36.102%2C0L7.486%2C237.893c-9.981%2C9.988-9.981%2C26.251%2C0%2C36.227%20%20l230.406%2C230.282v0.125c9.988%2C9.987%2C26.251%2C9.987%2C36.227%2C0l230.407-230.407C514.514%2C264.006%2C514.514%2C247.881%2C504.401%2C237.893z%20%20%20M307.145%2C319.945v-64.002H204.742v76.803H153.54V230.343c0-14.207%2C11.395-25.601%2C25.601-25.601h128.004V140.74l89.604%2C89.603%20%20L307.145%2C319.945z%22%20fill%3D%22%23007CBA%22%2F%3E%3C%2Fsvg%3E");
 }
 
-
+.goog-tranlated .splash .ui-btn  {
+	white-space: normal;
+	padding-left: 30px;
+	padding-right: 30px;
+}
 
 @media only screen and (max-width : 750px), screen and (max-device-height: 350px) {
   #panel-content {
