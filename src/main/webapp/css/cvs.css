@@ -74,7 +74,7 @@ a.phone, .info a.phone.ui-btn {
 #splash h1, #splash span {
   text-transform: capitalize;
 }
-#splash h1, #splash p, #splash p span {
+#splash h1, #splash p, .splash span {
   color: #fff;
 }
 .splash div.content {
@@ -116,7 +116,7 @@ a.phone, .info a.phone.ui-btn {
 #panel, #facility-list, #filter-tab {
   background-color: rgb(204,225,230);
 }
-#facility-list .info.even-row, #filter-tab,
+#facility-list .info.even-row, #filter-tab, #facility-tab,
 #filter-tab div.ui-collapsible-content, .ui-page-theme-a .ui-btn.ui-btn-active {
   background-color: rgb(179,219,231);
 }

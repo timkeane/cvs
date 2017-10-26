@@ -27,7 +27,7 @@ var filterControls = [
   }),
   new nyc.Check({
     target: '#type-filter',
-    title: 'Service category',
+    title: 'Support for a victim of',
     expanded: true,
     choices: [{
       name: 'INTIMATE_PARTNER_VIOLENCE',
