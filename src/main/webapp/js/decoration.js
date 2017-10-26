@@ -30,7 +30,7 @@ var finderDecorations = {
     'YIDDISH'
   ],
   extendFeature: function(){
-    var locationKey = this.get('LONGITUDE') + '@' + this.get('LATITUDE');
+    var locationKey = this.get('X') + '@' + this.get('Y');
     var count = finderDecorations.countByLocation[locationKey] || 0;
     finderDecorations.countByLocation[locationKey] = count + 1;
     this.locationKey = locationKey;

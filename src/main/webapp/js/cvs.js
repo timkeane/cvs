@@ -5,11 +5,11 @@ $(document).ready(function(){
   var finderSource = new nyc.ol.source.FilteringAndSorting(
     {loader: new nyc.ol.source.CsvPointFeatureLoader({
       url: 'data/facility.csv',
-      projection: 'EPSG:4326',
-      xCol: 'LONGITUDE',
-      yCol: 'LATITUDE'
+      projection: 'EPSG:2263',
+      xCol: 'X',
+      yCol: 'Y'
     })}, [finderDecorations],
-    {nativeProjection: 'EPSG:4326', projection: 'EPSG:3857'}
+    {nativeProjection: 'EPSG:2263', projection: 'EPSG:3857'}
   );
 
   map.addLayer(new ol.layer.Vector({
