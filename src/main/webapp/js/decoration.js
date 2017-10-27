@@ -60,6 +60,7 @@ var finderDecorations = {
   },
   nameHtml: function(){
     var div = $('<div class="name"></div>');
+    div.click($.proxy(this.logData, this));
     return div.html(this.get('ORGANIZATION_NAME'));
   },
   locationHtml: function(){
@@ -171,6 +172,12 @@ var finderDecorations = {
   },
   getName: function(){
     return this.get('ORGANIZATION_NAME');
+  },
+  /* provided for QA analyst use */
+  logData: function(event){
+    if (event.altKey){
+      console.info(this.getProperties());
+    }
   }
 };
 
