@@ -125,11 +125,11 @@ a.phone, .info a.phone.ui-btn {
 	min-height: 10px;
 	width: auto;
 }
-#panel, #facility-list, #filter-tab {
+#panel, #facility-list, #filter-tab, #filter-tab div.ui-collapsible-content {
   background-color: rgb(204,225,230);
 }
 #facility-list .info.even-row, #filter-tab, #facility-tab,
-#filter-tab div.ui-collapsible-content, .ui-page-theme-a .ui-btn.ui-btn-active {
+.ui-page-theme-a .ui-btn.ui-btn-active {
   background-color: rgb(179,219,231);
 }
 .ui-page-theme-a .ui-btn.ui-btn-active {
