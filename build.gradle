@@ -43,10 +43,10 @@ task replaceTokens(dependsOn: [setEnv, copyFiles]) << {
 	ant.taskdef(name: 'replace', classname: 'org.apache.tools.ant.taskdefs.Replace')
 	ant.replace(file: "build/${ver}/index.html", token: local_nyclib, value: project.ext["${env}_nyclib"])
 	if (project.hasProperty("cvs.${env}.geoclient.url")){
-		ant.replace(file: "build/${ver}/index.html", token: project.ext['cvs.git.geoclient.url'], value: project.ext["cvs.${env}.geoclient.url"])
+		ant.replace(file: "build/${ver}/js/cvs.js", token: project.ext['cvs.git.geoclient.url'], value: project.ext["cvs.${env}.geoclient.url"])
 	}
   if (project.hasProperty("cvs.${env}.google.url")){
-    ant.replace(file: "build/${ver}/index.html", token: project.ext['cvs.git.google.url'], value: project.ext["cvs.${env}.google.url"])
+    ant.replace(file: "build/${ver}/js/cvs.js", token: project.ext['cvs.git.google.url'], value: project.ext["cvs.${env}.google.url"])
 	}
   if (project.hasProperty('cvs.analytics')){
 		ant.replace(file: "build/${ver}/index.html", token: '/* google analytics */', value: project.ext['cvs.analytics'])
