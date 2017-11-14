@@ -52,7 +52,7 @@ task replaceTokens(dependsOn: [setEnv, copyFiles]) << {
 		ant.replace(file: "build/${ver}/index.html", token: '<!-- google analytics -->', value: project.ext["cvs.${env}.analytics"])
 	}
   if (project.hasProperty("cvs.${env}.form-url")){
-		ant.replace(file: "build/${ver}/index.html", token: 'FOEM_URL', value: project.ext["cvs.${env}.form-url"])
+		ant.replace(file: "build/${ver}/index.html", token: 'FORM_URL', value: project.ext["cvs.${env}.form-url"])
 	}
 }
 
