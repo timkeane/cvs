@@ -51,6 +51,9 @@ task replaceTokens(dependsOn: [setEnv, copyFiles]) << {
   if (project.hasProperty("cvs.${env}.analytics")){
 		ant.replace(file: "build/${ver}/index.html", token: '<!-- google analytics -->', value: project.ext["cvs.${env}.analytics"])
 	}
+  if (project.hasProperty("cvs.${env}.form-url")){
+		ant.replace(file: "build/${ver}/index.html", token: 'FOEM_URL', value: project.ext["cvs.${env}.form-url"])
+	}
 }
 
 task archive(type: Zip, dependsOn: [replaceTokens]) {}
