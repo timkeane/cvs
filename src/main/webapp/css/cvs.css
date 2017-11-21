@@ -24,6 +24,9 @@
   background-size: 22px;
   background-position: 3px center;
 }
+#splash.splash a {
+  text-transform: none;
+}
 #cvs-email-btn, #cvs-call-btn, .splash a {
   background-repeat: no-repeat;
 }
