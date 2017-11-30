@@ -1,10 +1,13 @@
+var timeOffset = 1000 * 60 * 15;
+var cacheBust = Math.round(new Date().getTime() / timeOffset) * timeOffset;
+
 $(document).ready(function(){
 
   var map = new nyc.ol.Basemap({target: $('#map').get(0)});
 
   var finderSource = new nyc.ol.source.FilteringAndSorting(
     {loader: new nyc.ol.source.CsvPointFeatureLoader({
-      url: 'data/facility.csv',
+      url: 'data/facility.csv?' + cacheBust,
       projection: 'EPSG:2263',
       xCol: 'X',
       yCol: 'Y'
