@@ -20,9 +20,8 @@ $(document).ready(function(){
     style: finderStyle
   }));
 
-  /* See README.md for getting your GeoClient App Id and App Key */
   var geocoder = new nyc.Geoclient(
-    'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
+    'https://maps.nyc.gov/geoclient/v1/search.json?app_key=9A02406C04F61E9B7&app_id=victimservices'
   );
 
   var locationMgr = new nyc.LocationMgr({
