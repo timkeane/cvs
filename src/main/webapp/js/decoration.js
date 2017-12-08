@@ -60,6 +60,9 @@ var finderDecorations = {
   },
   nameHtml: function(){
     var div = $('<div class="name"></div>');
+    if (this.get('WHEELCHAIR_ACCESS')){
+      div.addClass('accessible');
+    }
     div.click($.proxy(this.logData, this));
     return div.html(this.get('ORGANIZATION_NAME'));
   },
