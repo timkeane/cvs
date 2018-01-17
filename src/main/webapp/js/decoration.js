@@ -88,8 +88,8 @@ var finderDecorations = {
     var phone = this.get('PHONE').split(' ')[0].trim();
     if (phone){
       var ext = this.get('EXT');
-      ext = ext.split(' ')[0];
       var readable = ext ? ' ext. ' + ext : '';
+      ext = ext.split(' ')[0];
       ext = ext ? ',' + ext : '';
       return $('<a class="phone" data-role="button"></a>')
         .html(phone + readable).attr('href', 'tel:' + phone + ext);
