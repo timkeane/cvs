@@ -35,6 +35,15 @@ var finderDecorations = {
     finderDecorations.countByLocation[locationKey] = count + 1;
     this.locationKey = locationKey;
     this.locationIdx = count;
+    this.set(
+      'search_label',
+      '<span class="srch-lbl-lg">' + this.get('ORGANIZATION_NAME') + '</span><br>' +
+      '<span class="srch-lbl-sm">' + this.get('LOCATION_NAME') + '<span>'
+    );
+    this.set(
+      'name',
+      this.get('ORGANIZATION_NAME') + ' - ' + this.get('LOCATION_NAME')
+    );
   },
   getCountAtLocation: function(){
     return finderDecorations.countByLocation[this.locationKey];

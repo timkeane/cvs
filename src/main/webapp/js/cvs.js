@@ -70,4 +70,27 @@ $(document).ready(function(){
     showContact('email');
   });
 
+  function updateFacilitySearch(features){
+    setTimeout(function(){
+      locationMgr.controls.removeFeatures('cvs');
+      locationMgr.controls.setFeatures({
+        featureTypeName: 'cvs',
+        features: finderSource.getFeatures(),
+        nameField: 'name',
+        labelField: 'search_label'
+      });
+    }, 200);
+  };
+  $.each(filterControls, function(){
+      this.on('change', updateFacilitySearch);
+  });
+
+  var it = setInterval(function(){
+    console.warn(finderSource.get('featuresloaded'), finderSource.getFeatures().length);
+    if (finderSource.get('featuresloaded')){
+      updateFacilitySearch();
+      clearInterval(it);
+    }
+  }, 200);
+
 });
