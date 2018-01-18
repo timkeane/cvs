@@ -152,9 +152,14 @@ a.phone, .info a.phone.ui-btn {
 a.popup-closer,
 .pager-btns button.ui-btn:after,
 .btn-srch-typ:after, .fld-srch-container .ui-input-clear:after, .mnu-srch-typ .ui-btn-icon-left:after,
-.fld-srch-container .ui-listview>.ui-li-static:hover,
 .detail .ui-btn:after {
   background-color: rgba(0,124,186,.5);
+}
+.fld-srch-container .ui-listview>.ui-li-static:hover {
+  background-color: rgb(0,124,186);
+}
+.fld-srch-container .ui-listview>.ui-li-static:hover span {
+  color: #fff;
 }
 .ctl-btn.ui-btn:hover, .ctl-btn.ui-btn:visited,
 .dir-mode-btn.active-mode, .dir-mode-btn.ui-btn:hover,
