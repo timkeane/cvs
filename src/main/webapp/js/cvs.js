@@ -86,7 +86,6 @@ $(document).ready(function(){
   });
 
   var it = setInterval(function(){
-    console.warn(finderSource.get('featuresloaded'), finderSource.getFeatures().length);
     if (finderSource.get('featuresloaded')){
       updateFacilitySearch();
       clearInterval(it);
