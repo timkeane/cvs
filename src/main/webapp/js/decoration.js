@@ -54,7 +54,7 @@ var finderDecorations = {
       .append(this.nameHtml())
       .append(this.locationHtml())
       .append(this.addressHtml())
-      .append(this.phoneHtml())
+      .append(this.phoneHtml(true))
       .append(this.webHtml())
       .append(this.mapHtml())
       .append(this.directionsHtml())
@@ -84,15 +84,21 @@ var finderDecorations = {
     return div.append('<div>' + this.get('ADDRESS_1') + '</div>')
       .append('<div>' + this.get('ADDRESS_2') + '</div>');
   },
-  phoneHtml: function(){
+  phoneHtml: function(button){
     var phone = this.get('PHONE').split(' ')[0].trim();
     if (phone){
+      var result;
       var ext = this.get('EXT');
       var readable = ext ? ' ext. ' + ext : '';
       ext = ext.split(' ')[0];
       ext = ext ? ',' + ext : '';
-      return $('<a class="phone" data-role="button"></a>')
-        .html(phone + readable).attr('href', 'tel:' + phone + ext);
+      if (button){
+        result = $('<a class="phone" data-role="button"></a>')
+          .attr('href', 'tel:' + phone + ext);
+      }else{
+        result = $('<span></span>');
+      }
+      return result.html(phone + readable);
     }
   },
   webHtml: function(){
@@ -120,7 +126,9 @@ var finderDecorations = {
   },
   detailContent: function(){
     var div = $('<div></div>');
+    var phone = $('<div class="phone"><b>Phone:</b> </div>')
     return div.append(this.hoursHtml())
+      .append(phone.append(this.phoneHtml()))
       .append(this.eligibilityHtml())
       .append(this.servicesHtml())
       .append(this.languagesHtml())
