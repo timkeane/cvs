@@ -220,7 +220,11 @@ a.filter-info, a.filter-info:hover {
   text-align: center;
   margin-top: -2px;
 }
-
+.inf-full-screen .info .ui-btn.directions {
+  display: block;
+  width: auto;
+  margin-bottom: 5px;
+}
 div.filter-info {
   display: none;
   font-weight: normal;
