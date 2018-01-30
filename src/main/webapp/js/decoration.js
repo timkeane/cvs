@@ -68,7 +68,7 @@ var finderDecorations = {
     }
   },
   nameHtml: function(){
-    var div = $('<div class="name"></div>');
+    var div = $('<div class="name notranslate" translate="no"></div>');
     if (this.get('WHEELCHAIR_ACCESS')){
       div.addClass('accessible');
     }
@@ -76,11 +76,11 @@ var finderDecorations = {
     return div.html(this.get('ORGANIZATION_NAME'));
   },
   locationHtml: function(){
-    var div = $('<div class="location"></div>');
+    var div = $('<div class="location notranslate" translate="no"></div>');
     return div.html(this.get('LOCATION_NAME'));
   },
   addressHtml: function(){
-    var div = $('<div class="address"></div>');
+    var div = $('<div class="address notranslate" translate="no"></div>');
     return div.append('<div>' + this.get('ADDRESS_1') + '</div>')
       .append('<div>' + this.get('ADDRESS_2') + '</div>');
   },
@@ -93,7 +93,7 @@ var finderDecorations = {
       ext = ext.split(' ')[0];
       ext = ext ? ',' + ext : '';
       if (button){
-        result = $('<a class="phone" data-role="button"></a>')
+        result = $('<a class="phone notranslate" translate="no" data-role="button"></a>')
           .attr('href', 'tel:' + phone + ext);
       }else{
         result = $('<span></span>');
