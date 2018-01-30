@@ -1,10 +1,3 @@
-function filterInfo(event){
-  event.preventDefault();
-  event.stopImmediatePropagation();
-  $(event.target).next().slideToggle();
-  return false;
-};
-
 var filterControls = [
   new nyc.Check({
     target: '#age-filter',
@@ -39,12 +32,12 @@ var filterControls = [
     choices: [{
       name: 'INTIMATE_PARTNER_VIOLENCE',
       value: '1',
-      label: 'Intimate partner violence <a class="filter-info" onclick="filterInfo(event);">?</a><div class="filter-info">Physical, sexual, psychological, or economic abuse that occurs between a former husband/wife, boyfriend/girlfriend, child\'s mother/father or a partner that someone lives with or used to live with</div>',
+      label: 'Intimate partner violence <a class="filter-info">?</a><div class="filter-info">Physical, sexual, psychological, or economic abuse that occurs between a former husband/wife, boyfriend/girlfriend, child\'s mother/father or a partner that someone lives with or used to live with</div>',
       checked: false
     }, {
       name: 'FAMILY_VIOLENCE',
       value: '1',
-      label: 'Family violence <a class="filter-info" onclick="filterInfo(event);">?</a><div class="filter-info">Physical, sexual, psychological, or economic abuse that occurs between family members</div>',
+      label: 'Family violence <a class="filter-info">?</a><div class="filter-info">Physical, sexual, psychological, or economic abuse that occurs between family members</div>',
       checked: false
     }, {
       name: 'SEXUAL_ASSAULT',

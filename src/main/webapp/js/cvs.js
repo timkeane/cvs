@@ -92,4 +92,10 @@ $(document).ready(function(){
     }
   }, 200);
 
+  $('a.filter-info').on('click tap', function(event){
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    $(event.target).next().slideToggle();
+    return false;
+  });
 });
